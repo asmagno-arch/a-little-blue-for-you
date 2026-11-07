@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#dcecff">
+  <meta name="description" content="A tiny blue birthday surprise, made just for you.">
+  <title>A little birthday surprise</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="topline">
+      <span class="stamp"><i class="dot"></i> a tiny birthday edition</span>
+      <span class="edition">made just for you · 01</span>
+    </header>
+
+    <section class="hero" aria-labelledby="birthday-title">
+      <div class="copy">
+        <p class="eyebrow">Today is all yours</p>
+        <h1 id="birthday-title">Happy<br>birthday, <em>you.</em></h1>
+        <p class="intro">I hope your day is full of your favorite things, little surprises, and the kind of happiness that stays long after the candles are out.</p>
+        <div class="hero-actions">
+          <button class="button button-primary" id="openNote" type="button"><span aria-hidden="true">✉</span> Open your little note</button>
+          <button class="button button-soft" id="openGallery" type="button"><span aria-hidden="true">♡</span> Open our photo album</button>
+        </div>
+      </div>
+
+      <div class="art-wrap" aria-label="A cute collectible figure inspired by his dark hair and relaxed outfits">
+        <div class="halo" aria-hidden="true"></div>
+        <span class="spark spark-one" aria-hidden="true">✦</span>
+        <span class="spark spark-two" aria-hidden="true">✧</span>
+        <span class="spark spark-three" aria-hidden="true">♡</span>
+        <div class="figure-card">
+          <svg class="toy" viewBox="0 0 260 340" role="img" aria-labelledby="toyTitle toyDesc" xmlns="http://www.w3.org/2000/svg">
+            <title id="toyTitle">A little birthday art-toy portrait</title>
+            <desc id="toyDesc">A soft, quiet-faced collectible figure with fluffy middle-parted black hair, a dark sweater, necklace, loose blue jeans, and a little watch.</desc>
+            <defs>
+              <linearGradient id="faceTone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f2d8c2"/><stop offset="1" stop-color="#dcb99f"/></linearGradient>
+              <linearGradient id="sweaterTone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#424a56"/><stop offset="1" stop-color="#232a34"/></linearGradient>
+              <linearGradient id="pantsTone" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a7bfd5"/><stop offset="1" stop-color="#7892ad"/></linearGradient>
+            </defs>
+            <ellipse cx="132" cy="321" rx="76" ry="12" fill="#afc2d1" opacity=".48"/>
+            <!-- loose jeans and shoes -->
+            <path d="M79 219h108l-7 78q-1 12-14 12h-27l-3-61-7 61h-29q-13 0-14-13z" fill="url(#pantsTone)"/>
+            <path d="M107 231v70m34-69v69m-29-58h49" fill="none" stroke="#69839f" stroke-width="3" opacity=".58"/>
+            <path d="M87 298h35q5 2 4 13H72q2-9 15-13zm55 0h36q13 4 14 13h-52z" fill="#263342"/>
+            <!-- arms and oversized dark sweater -->
+            <path d="M83 132q-28 8-37 43l-17 55q-4 13 9 18l12 4 27-54-2 31q0 13 14 15h87q14-2 14-15l-3-31 27 54 12-4q13-5 8-18l-17-55q-10-35-39-43z" fill="url(#sweaterTone)"/>
+            <path d="M87 137q17-14 46-14t47 15l-5 28q-17 14-42 14t-42-14z" fill="#303945"/>
+            <!-- chain necklace -->
+            <path d="M108 157q0 35 24 42 24-7 24-42" fill="none" stroke="#d9d3c5" stroke-width="2.5"/>
+            <circle cx="132" cy="198" r="3.5" fill="#f1dda8"/>
+            <!-- small wristwatch -->
+            <path d="M191 192h10v27h-10z" fill="#d9d3c5"/>
+            <circle cx="196" cy="205" r="7" fill="#e8e3d8" stroke="#8c9297" stroke-width="2"/>
+            <path d="M196 201v4l3 2" fill="none" stroke="#69798b" stroke-width="1.4"/>
+            <!-- toy-like head -->
+            <path d="M82 74q0-51 50-55 49 2 51 55l-4 54q-4 40-47 47-43-7-47-47z" fill="url(#faceTone)"/>
+            <!-- fluffy center-parted dark hair -->
+            <path d="M78 92q-15-18-6-42 1-25 25-30 8-24 37-21 20-3 29 15 24 4 25 30 9 22-5 45l-11 12-2-29q-13-5-22-20-13 19-28 20-11-14-21-19-4 21-18 30l-1 26z" fill="#20242b"/>
+            <path d="M83 67q10-30 33-46m-21 48q13-30 35-46m-16 43q9-28 22-41m2 40q7-22 6-38m5 43q13-22 11-39m1 44q14-14 16-29" fill="none" stroke="#353b45" stroke-width="8" stroke-linecap="round"/>
+            <path d="M100 108q8-5 16-1m31 0q8-5 16 1" fill="none" stroke="#716059" stroke-width="2.5" stroke-linecap="round"/>
+            <ellipse cx="109" cy="117" rx="3.3" ry="4.4" fill="#3c4654"/>
+            <ellipse cx="154" cy="117" rx="3.3" ry="4.4" fill="#3c4654"/>
+            <path d="M127 143q5 3 10 0" fill="none" stroke="#a97570" stroke-width="2" stroke-linecap="round"/>
+            <ellipse cx="95" cy="130" rx="8" ry="3.5" fill="#d68b84" opacity=".32"/>
+            <ellipse cx="168" cy="130" rx="8" ry="3.5" fill="#d68b84" opacity=".32"/>
+            <path d="M84 77q-10 1-10 15 1 14 12 15m98-30q11 0 11 15-1 14-12 15" fill="url(#faceTone)" stroke="#c99f8d" stroke-width="2"/>
+            <path d="M51 104l5 11 11 4-11 4-5 11-4-11-11-4 11-4z" fill="#f2d48c"/>
+          </svg>
+          <span class="figure-label">a little daydream · 01</span>
+        </div>
+        <div class="float-note">your own tiny figure ✦</div>
+      </div>
+    </section>
+
+    <section class="calendar-section" aria-label="Birthday calendar">
+      <div class="calendar-card">
+        <div class="calendar-heading">
+          <div><p class="eyebrow">Save the date</p><h2>November <span>2026</span></h2></div>
+          <span class="calendar-heart" aria-hidden="true">♡</span>
+        </div>
+        <div class="calendar-grid" role="grid" aria-label="November 2026">
+          <span class="calendar-weekday">S</span><span class="calendar-weekday">M</span><span class="calendar-weekday">T</span><span class="calendar-weekday">W</span><span class="calendar-weekday">T</span><span class="calendar-weekday">F</span><span class="calendar-weekday">S</span>
+          <span class="calendar-day">1</span><span class="calendar-day">2</span><span class="calendar-day">3</span><span class="calendar-day">4</span><span class="calendar-day">5</span><span class="calendar-day">6</span><span class="calendar-day">7</span>
+          <span class="calendar-day birthday" aria-label="November 8, his birthday">8</span><span class="calendar-day">9</span><span class="calendar-day">10</span><span class="calendar-day">11</span><span class="calendar-day">12</span><span class="calendar-day">13</span><span class="calendar-day">14</span>
+          <span class="calendar-day">15</span><span class="calendar-day">16</span><span class="calendar-day">17</span><span class="calendar-day">18</span><span class="calendar-day">19</span><span class="calendar-day">20</span><span class="calendar-day">21</span>
+          <span class="calendar-day">22</span><span class="calendar-day">23</span><span class="calendar-day">24</span><span class="calendar-day">25</span><span class="calendar-day">26</span><span class="calendar-day">27</span><span class="calendar-day">28</span>
+          <span class="calendar-day">29</span><span class="calendar-day">30</span><span class="calendar-day empty"></span><span class="calendar-day empty"></span><span class="calendar-day empty"></span><span class="calendar-day empty"></span><span class="calendar-day empty"></span>
+        </div>
+        <p class="calendar-caption"><span>♡</span> November 8 — your day!</p>
+      </div>
+    </section>
+
+    <section class="album-teaser" aria-label="Photo album">
+      <div><p class="eyebrow">little moments, kept close</p><h2>A few favorite memories</h2></div>
+      <button class="button button-primary" id="openGallery" type="button"><span aria-hidden="true">▧</span> Open our photo album</button>
+    </section>
+
+    <footer>sent with a little extra <span aria-label="love">♥</span> and a lot of birthday wishes</footer>
+  </main>
+
+  <div class="modal" id="noteModal" role="dialog" aria-modal="true" aria-labelledby="noteTitle" aria-hidden="true">
+    <article class="modal-card letter">
+      <button class="close" type="button" data-close="noteModal" aria-label="Close birthday note">×</button>
+      <p class="eyebrow">a note for your day</p>
+      <h2 id="noteTitle">To my favorite notification,</h2>
+      <p>Happy birthday! I’m really glad we started talking. Somehow, our everyday chats have become one of my favorite parts of the day, and you make even the most ordinary conversations feel a little brighter.</p>
+      <p>I hope this new year brings you all the things you’ve been wishing for, lots of reasons to laugh, and plenty of moments that remind you how wonderful you are. Little did you know, I was already starstruck when we first started talking. You have this way of making our everyday conversations feel special, and I hope today reminds you how appreciated you are.</p>
+      <p class="signoff">Your daily chat buddy ♡</p>
+    </article>
+  </div>
+
+  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="galleryTitle" aria-hidden="true">
+    <section class="modal-card gallery-card">
+      <button class="close" type="button" data-close="galleryModal" aria-label="Close photo album">×</button>
+      <p class="eyebrow">little moments, kept close</p>
+      <h2 id="galleryTitle">Our little album</h2>
+      <div class="photo-frame" aria-live="polite">
+        <div class="empty-gallery" id="emptyGallery"><span aria-hidden="true">✧</span><p>Your favorite memories go here.</p><small>Add pictures to start the carousel.</small></div>
+        <img id="carouselImage" alt="Selected memory" hidden>
+      </div>
+      <div class="carousel-controls">
+        <button class="round-button" id="previousPhoto" type="button" aria-label="Previous photo" disabled>←</button>
+        <span class="slide-count" id="slideCount">0 photos</span>
+        <button class="round-button" id="nextPhoto" type="button" aria-label="Next photo" disabled>→</button>
+      </div>
+      <label class="button button-primary upload-button" for="photoUpload"><span aria-hidden="true">＋</span> Add your pictures</label>
+      <input id="photoUpload" type="file" accept="image/*" multiple hidden>
+      <p class="gallery-hint">Choose photos from your device. They’ll show in this browser while the page is open.</p>
+    </section>
+  </div>
+</body>
+</html>
