@@ -2,6 +2,7 @@ const modals = [...document.querySelectorAll('.modal')];
 let previousFocus = null;
 let photos = [];
 let photoIndex = 0;
+let touchStartX = 0;
 
 const photoInput = document.querySelector('#photoUpload');
 const carouselImage = document.querySelector('#carouselImage');
@@ -27,16 +28,16 @@ function closeModal(modal) {
 }
 
 function celebrate() {
-  for (let i = 0; i < 9; i++) {
-    const spark = document.createElement('span');
-    spark.className = 'heart';
-    spark.textContent = ['♡', '✦', '♥'][i % 3];
-    spark.style.left = `${35 + Math.random() * 30}%`;
-    spark.style.top = `${58 + Math.random() * 18}%`;
-    spark.style.color = ['#6f9ed0', '#e4b952', '#d18595'][i % 3];
-    spark.style.fontSize = `${14 + Math.random() * 12}px`;
-    document.body.append(spark);
-    spark.addEventListener('animationend', () => spark.remove(), { once: true });
+  for (let i = 0; i < 12; i++) {
+    const heart = document.createElement('span');
+    heart.className = 'heart';
+    heart.textContent = ['♡', '✦', '♥'][i % 3];
+    heart.style.left = `${30 + Math.random() * 40}%`;
+    heart.style.top = `${55 + Math.random() * 25}%`;
+    heart.style.color = ['#6f9ed0', '#e4b952', '#d18595'][i % 3];
+    heart.style.fontSize = `${14 + Math.random() * 14}px`;
+    document.body.append(heart);
+    heart.addEventListener('animationend', () => heart.remove(), { once: true });
   }
 }
 
@@ -62,11 +63,8 @@ function movePhoto(direction) {
   showPhoto();
 }
 
-document.querySelector('#openNote')
-  .addEventListener('click', () => openModal('noteModal'));
-
-document.querySelector('#openGallery')
-  .addEventListener('click', () => openModal('galleryModal'));
+document.querySelector('#openNote').addEventListener('click', () => openModal('noteModal'));
+document.querySelector('#openGallery').addEventListener('click', () => openModal('galleryModal'));
 
 document.querySelectorAll('[data-close]').forEach(button => {
   button.addEventListener('click', () => {
@@ -90,12 +88,11 @@ document.addEventListener('keydown', event => {
 });
 
 photoInput.addEventListener('change', event => {
-  const addedPhotos = [...event.target.files]
-    .filter(file => file.type.startsWith('image/'))
-    .map(file => ({ url: URL.createObjectURL(file) }));
+  const files = [...event.target.files].filter(file => file.type.startsWith('image/'));
+  const newPhotos = files.map(file => ({ url: URL.createObjectURL(file) }));
 
-  photos.push(...addedPhotos);
-  if (photos.length) photoIndex = photos.length - addedPhotos.length;
+  photos.push(...newPhotos);
+  if (newPhotos.length) photoIndex = photos.length - newPhotos.length;
 
   showPhoto();
   photoInput.value = '';
@@ -103,5 +100,16 @@ photoInput.addEventListener('change', event => {
 
 previousPhoto.addEventListener('click', () => movePhoto(-1));
 nextPhoto.addEventListener('click', () => movePhoto(1));
+
+const photoFrame = document.querySelector('.photo-frame');
+
+photoFrame.addEventListener('touchstart', event => {
+  touchStartX = event.changedTouches[0].screenX;
+}, { passive: true });
+
+photoFrame.addEventListener('touchend', event => {
+  const distance = event.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(distance) > 45) movePhoto(distance < 0 ? 1 : -1);
+}, { passive: true });
 
 showPhoto();
